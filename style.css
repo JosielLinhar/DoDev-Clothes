@@ -9,8 +9,9 @@
 
 body {
   width: 100%;
-  height: 1000vh;
+  height: 100%;
   background-color: white;
+  user-select: none;
 }
 
 .navMenu {
@@ -32,21 +33,35 @@ body {
 }
 
 .navItem {
-  margin-left: 5vw;
+  margin-left: 3vw;
   font-size: 1.2rem;
 }
 
 .navItem a {
   color: black;
+  transition: 0.3s;
+}
+
+.navItem a:hover {
+  color: rgb(75, 75, 75);
 }
 
 .navItem:first-child {
-  margin-left: 10vw;
+  margin-left: 5vw;
   font-size: 2rem;
 }
 
 .navBuy {
   margin-right: 5vw;
+}
+
+.navBuy img {
+  width: 1.2vw;
+  transition: 0.5s;
+}
+
+.navBuy img:hover {
+  transform: scale(1.2);
 }
 
 .container {
@@ -102,6 +117,7 @@ body {
   padding: 10px 40px;
   font-size: 1.3rem;
   border-radius: 0.2vw;
+  transition: 0.5s;
 }
 
 .secondBox {
@@ -115,6 +131,8 @@ body {
 .container-model h2 {
   margin-top: 20vh;
   margin-bottom: 20vh;
+  font-size: 2.3rem;
+  font-weight: 300;
 }
 
 .boxClothes {
@@ -171,28 +189,71 @@ body {
 
 .container-form {
   width: 60vw;
-  height: 50vh;
+  height: 30vh;
   margin-top: 10vh;
   text-align: left;
-  background-color: gray;
 }
 
 .container-form h3 {
   font-size: 1.7rem;
-  font-weight: 400;
-  margin: 2vh 0;
+  font-weight: 600;
+  margin-bottom: 5vh;
 }
 
 #inputName,
 button {
-  margin-left: 5vw;
+  margin-left: 4vw;
+}
+
+input {
+  border: 0;
+  background-color: rgb(189, 189, 189);
+  padding: 0.5vh 1vw;
+  color: black;
+}
+
+input:hover {
+  background-color: rgb(172, 172, 172);
 }
 
 input,
 button {
   width: 25vw;
-  height: 7vh;
+  height: 6vh;
   text-align: left;
   outline: 0;
   margin-bottom: 5vh;
+  font-size: 1rem;
+  border-radius: 0.2vw;
+  transition: 0.5s;
+}
+
+button {
+  width: 15vw;
+  border: 0;
+  background-color: black;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover,
+.buyBtn:hover {
+  background-color: rgb(56, 56, 56);
+}
+
+.footerBox {
+  width: 80vw;
+  height: 25vh;
+  margin: 2vh auto;
+}
+
+.footer-menu {
+  width: 80vw;
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 }
