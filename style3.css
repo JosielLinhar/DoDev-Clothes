@@ -1,3 +1,10 @@
+:root {
+  --mainUrl: url("https://acdn.mitiendanube.com/stores/003/347/540/products/sem-titulo-1-b851e1195c63bacd6b17194356832018-1024-1024.webp");
+  --firstUrl: url("https://acdn.mitiendanube.com/stores/003/347/540/products/sem-titulo-1-27d422294c5bf8f5cf17194356670460-1024-1024.webp");
+  --secondUrl: url("https://acdn.mitiendanube.com/stores/003/347/540/products/sem-titulo-1-9568b3ef4e0f31c9ac17194353940508-1024-1024.webp");
+  --thirdUrl: url("https://acdn.mitiendanube.com/stores/003/347/540/products/sem-titulo-1-8b39935c0a03a87efd17194352631600-1024-1024.webp");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -80,58 +87,133 @@ body {
   display: flex;
   flex-direction: row;
   align-items: start;
-  background-color: gray;
 }
 
-.boxImg {
-  width: 40vw;
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 5vh 0;
+}
+
+.price {
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 0 0 5vh 0;
+}
+
+.boxImg,
+.boxPrice {
+  width: 50vw;
   height: 80vh;
   display: flex;
   flex-direction: column;
+  padding: 2vh 1.5vw;
 }
 
 .mainImg {
   width: 50%;
-  height: 60vh;
-  margin: 2vh auto 2vh auto;
+  height: 50vh;
+  margin: 6vh auto 0 auto;
 
   background-position: center;
-  background-size: cover;
-  background-image: url("https://images.unsplash.com/photo-1512327428889-607eeb19efe8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDUzMDJ8MHwxfHNlYXJjaHwzMHx8dHNoaXJ0fGVufDF8fHx8MTY5MDIyNzk0MHww&ixlib=rb-4.0.3&q=80&w=1080");
-}
-
-.groupImgs {
-  margin-left: 0.5vw;
-}
-
-.groupImgs:first-child {
-  margin-left: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: var(--mainUrl);
 }
 
 .imgs {
   display: flex;
-  background-color: red;
   width: 50%;
   height: 20vh;
-  margin: 0 auto 2vh auto;
+  margin: 0 auto;
+}
+
+.mainImg,
+.groupImgs {
+  background-color: rgb(241, 241, 241);
+}
+
+.groupImgs {
+  width: 33.3%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  margin-top: 1vh;
+}
+
+.groupImgs:hover {
+  transform: scale(1.05);
 }
 
 .firstImg {
-  width: 33.3%;
-  height: 100%;
-  background-color: purple;
+  background-image: var(--firstUrl);
 }
 
 .secondImg {
-  width: 33.3%;
-  height: 100%;
-  background-color: aqua;
+  background-image: var(--secondUrl);
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
 }
 
 .thirdImg {
-  width: 33.3%;
-  height: 100%;
-  background-color: blue;
+  background-image: var(--thirdUrl);
+}
+
+.boxPrice {
+  justify-content: center;
+  text-align: left;
+}
+
+.buyInputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.btnQuantity {
+  width: 15vw;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1vh;
+  border: 1px solid black;
+  border-radius: 0.2vh;
+}
+
+.btnQuantity button {
+  width: 3.5vw;
+  background-color: rgb(189, 189, 189);
+  margin: 0;
+}
+
+.btnQuantity button:first-child {
+  border-radius: 0.2vh 0 0 0.2vh;
+}
+
+.btnQuantity button:last-child {
+  border-radius: 0 0.2vh 0.2vh 0;
+}
+
+#quantity {
+  width: 8vw;
+  border-radius: 0;
+  margin: 0;
+}
+
+.buyInputs input {
+  text-align: center;
+}
+
+.buyInputs input::-webkit-inner-spin-button,
+.buyInputs input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#btnAdd {
+  margin: 3vh 0 0 0;
 }
 
 .container-form {
@@ -159,7 +241,8 @@ input {
   color: black;
 }
 
-input:hover {
+#asc:hover,
+#desc:hover {
   background-color: rgb(172, 172, 172);
 }
 
