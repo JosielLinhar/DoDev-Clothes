@@ -1,0 +1,284 @@
+:root {
+  --mainUrl: url("https://acdn.mitiendanube.com/stores/003/364/909/products/f8253d68-f25b-4b44-bbb0-09a65d437c3e1-ee39bfdf5d378084c916907681662600-1024-1024.webp");
+  --firstUrl: url("https://acdn.mitiendanube.com/stores/003/364/909/products/img-20231013-wa0085-31506dbcf5271bb22716972260110791-1024-1024.webp");
+  --secondUrl: url("https://acdn.mitiendanube.com/stores/003/364/909/products/8e63180d-6263-4d8f-8a60-02bc8f2209931-220484f952c79608ef16908631814986-1024-1024.webp");
+  --thirdUrl: url("https://acdn.mitiendanube.com/stores/003/364/909/products/masculino-calcca-tactel-masculina-caqui-p-16194492887551-d562e2ee9ea79c11f816880512095457-1024-1024.webp");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  user-select: none;
+}
+
+.navMenu {
+  width: 80vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.navList {
+  width: 80vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.navItem {
+  margin-left: 3vw;
+  font-size: 1.2rem;
+}
+
+.navItem a {
+  color: black;
+  transition: 0.3s;
+}
+
+.navItem a:hover {
+  color: rgb(75, 75, 75);
+}
+
+.navItem:first-child {
+  margin-left: 5vw;
+  font-size: 2rem;
+}
+
+.navBuy {
+  margin-right: 5vw;
+}
+
+.navBuy img {
+  width: 1.2vw;
+  transition: 0.5s;
+}
+
+.navBuy img:hover {
+  transform: scale(1.2);
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerBox {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 5vh 0;
+}
+
+.price {
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 0 0 5vh 0;
+}
+
+.boxImg,
+.boxPrice {
+  width: 50vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 1.5vw;
+}
+
+.mainImg {
+  width: 50%;
+  height: 50vh;
+  margin: 6vh auto 0 auto;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--mainUrl);
+}
+
+.imgs {
+  display: flex;
+  width: 50%;
+  height: 20vh;
+  margin: 0 auto;
+}
+
+.groupImgs {
+  width: 33.3%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  margin-top: 1vh;
+}
+
+.groupImgs:hover {
+  transform: scale(1.05);
+}
+
+.firstImg {
+  background-image: var(--firstUrl);
+}
+
+.secondImg {
+  background-image: var(--secondUrl);
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+.thirdImg {
+  background-image: var(--thirdUrl);
+}
+
+.boxPrice {
+  justify-content: center;
+  text-align: left;
+}
+
+.buyInputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.btnQuantity {
+  width: 15vw;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1vh;
+  border: 1px solid black;
+  border-radius: 0.2vh;
+}
+
+.btnQuantity button {
+  width: 3.5vw;
+  background-color: rgb(189, 189, 189);
+  margin: 0;
+}
+
+.btnQuantity button:first-child {
+  border-radius: 0.2vh 0 0 0.2vh;
+}
+
+.btnQuantity button:last-child {
+  border-radius: 0 0.2vh 0.2vh 0;
+}
+
+#quantity {
+  width: 8vw;
+  border-radius: 0;
+  margin: 0;
+}
+
+.buyInputs input {
+  text-align: center;
+}
+
+.buyInputs input::-webkit-inner-spin-button,
+.buyInputs input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#btnAdd {
+  margin: 3vh 0 0 0;
+}
+
+.container-form {
+  width: 60vw;
+  height: 30vh;
+  margin-top: 10vh;
+  text-align: left;
+}
+
+.container-form h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 5vh;
+}
+
+#inputName,
+button {
+  margin-left: 4vw;
+}
+
+input {
+  border: 0;
+  background-color: rgb(189, 189, 189);
+  padding: 0.5vh 1vw;
+  color: black;
+}
+
+#asc:hover,
+#desc:hover {
+  background-color: rgb(172, 172, 172);
+}
+
+input,
+button {
+  width: 25vw;
+  height: 6vh;
+  text-align: left;
+  outline: 0;
+  margin-bottom: 5vh;
+  font-size: 1rem;
+  border-radius: 0.2vw;
+  transition: 0.5s;
+}
+
+button {
+  width: 15vw;
+  border: 0;
+  background-color: black;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover,
+.buyBtn:hover {
+  background-color: rgb(56, 56, 56);
+}
+
+.footerBox {
+  width: 80vw;
+  height: 25vh;
+  margin: 2vh auto;
+}
+
+.footer-menu {
+  width: 80vw;
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
